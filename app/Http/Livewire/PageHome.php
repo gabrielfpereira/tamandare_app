@@ -18,7 +18,7 @@ class PageHome extends Component
     public function render()
     {
         $this->filterDate = $this->filterDate ?? now()->format('Y-m-d');
-        $this->turmas = Contador::whereDate('created_at', $this->filterDate)->get();
+        $this->turmas = Contador::whereDate('created_at', $this->filterDate)->orderBy('turma','ASC')->get();
         $this->somar();
         return view('livewire.page-home')->layout('layouts.guest');
     }
