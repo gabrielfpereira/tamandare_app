@@ -19,14 +19,14 @@
         <livewire:turma-component />
         <div class="mx-8"><span>Qtde: {{count($turmas)}}</span></div>
 
-        <div class="grid grid-cols-2 gap-2">
+        <div class="grid grid-cols-2 gap-2 mx-4">
             @forelse ($turmas as $index => $turma)
-                <div class="gf bg-white mx-8 rounded mt-4 border-b-2 border-cyan-800 p-4 flex justify-center items-center w-10/12 gap-1">
+                <div class="gf bg-white rounded mt-1 border-b-2 border-cyan-800 px-2 py-2 flex justify-between items-center w-full">
+                    <livewire:button-check :wire:key="$index" />
                     <h3>{{$turma['turma']}}: {{$turma['quantidade']}}</h3>
                     <button wire:click="deletar({{$index}},{{$turma->id}})" class="gf p-1 text-white rounded mr-2">
                         <img class="w-6 h-6 text-gray-50" src="{{asset('img/trash-svgrepo-com.svg')}}" alt="deletar">
                     </button>
-                    <livewire:button-check :wire:key="$index" />
                 </div>
             @empty
                 <p class="bg-white mx-8 rounded mt-4 p-4">Por favor insira a quantidade de alunos nas turmas.</p>
