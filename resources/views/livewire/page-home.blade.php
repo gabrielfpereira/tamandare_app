@@ -23,7 +23,7 @@
             @forelse ($turmas as $index => $turma)
                 <div class="gf bg-white mx-8 rounded mt-4 border-b-2 border-cyan-800 p-4 flex justify-center items-center w-10/12 gap-1">
                     <h3>{{$turma['turma']}}: {{$turma['quantidade']}}</h3>
-                    <button wire:click="deletar({{$index}},{{$turma->id}})" class="gf bg-red-600 p-1 text-white rounded mr-2">
+                    <button wire:click="deletar({{$index}},{{$turma->id}})" class="gf p-1 text-white rounded mr-2">
                         <img class="w-6 h-6 text-gray-50" src="{{asset('img/trash-svgrepo-com.svg')}}" alt="deletar">
                     </button>
                     <livewire:button-check :wire:key="$index" />
