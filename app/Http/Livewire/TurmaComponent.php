@@ -18,6 +18,7 @@ class TurmaComponent extends Component
     {
         if($this->validar()){
             $this->emit('atualizarsoma', $this->turmaSelect);
+            $this->reset('turmaSelect');
         }
     }
 
