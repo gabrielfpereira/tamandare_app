@@ -30,9 +30,11 @@ class PageHome extends Component
             if ($this->validarTurma($turma)){
                 Contador::where('turma',$turma['turma'])->update($turma);
                 $this->turmas[$this->keyUpdate]['quantidade'] = $turma['quantidade'];
+                session()->flash('message', "turma: ".$turma['turma']." atualizada.");
             } else {
                 Contador::create($turma);
-                $this->turmas[] = $turma;            
+                $this->turmas[] = $turma;   
+                session()->flash('message', "turma: ".$turma['turma']." inserida.");         
             }
                 
 

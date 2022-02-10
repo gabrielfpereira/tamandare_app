@@ -13,12 +13,16 @@
     </div>
 
     <div class="mx-auto bg-slate-100 min-h-screen py-2">
+        @if (session()->has('message'))
+            <div class=" bg-yellow-100 p-2 mx-8 my-2">{{session('message')}}</div>
+        @endif
         <livewire:turma-component />
         <div class="mx-8"><span>Qtde: {{count($turmas)}}</span></div>
         @forelse ($turmas as $index => $turma)
             <div class="gf bg-white mx-8 rounded mt-4 border-b-2 border-cyan-800 p-4 flex justify-center items-center gap-7">
                 <h3>{{$turma['turma']}}: {{$turma['quantidade']}}</h3>
                 <button wire:click="deletar({{$index}},{{$turma->id}})" class="gf bg-red-600 p-1 text-white rounded">deletar</button>
+                <livewire:button-check :wire:key="$index" />
             </div>
         @empty
             <p class="bg-white mx-8 rounded mt-4 p-4">Por favor insira a quantidade de alunos nas turmas.</p>

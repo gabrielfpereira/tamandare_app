@@ -15,4 +15,5 @@
     
         <button wire:click="addTurma" class="gf bg-green-600 p-2 rounded text-white">OK</button>
     </div>
+
 </div>
