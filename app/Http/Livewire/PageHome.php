@@ -32,6 +32,7 @@ class PageHome extends Component
                 $this->turmas[$this->keyUpdate]['quantidade'] = $turma['quantidade'];
                 session()->flash('message', "turma: ".$turma['turma']." atualizada.");
             } else {
+                $turma['user_id'] = auth()->user()->id;
                 Contador::create($turma);
                 $this->turmas[] = $turma;   
                 session()->flash('message', "turma: ".$turma['turma']." inserida.");         
