@@ -65,7 +65,7 @@ class ContadorPolicy
      */
     public function delete(User $user, Contador $contador)
     {
-        //
+        return $user->id == $contador->user_id;
     }
 
     /**
