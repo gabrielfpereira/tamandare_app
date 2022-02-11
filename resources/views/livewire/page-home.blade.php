@@ -24,7 +24,7 @@
                 <div class="gf bg-white rounded mt-1 border-b-2 border-cyan-800 px-2 py-2 flex justify-between items-center w-full">
                     <livewire:button-check :wire:key="$index" />
                     <h3>{{$turma['turma']}}: {{$turma['quantidade']}}</h3>
-                    @can('update', $turma)
+                    @can('delete', $turma)
                         <button wire:click="deletar({{$index}},{{$turma->id}})" class="gf p-1 text-white rounded mr-2">
                             <img class="w-6 h-6 text-gray-50" src="{{asset('img/trash-svgrepo-com.svg')}}" alt="deletar">
                         </button>                        
