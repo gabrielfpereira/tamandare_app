@@ -27,7 +27,7 @@ class PageHome extends Component
 
     public function atualizar($turma)
     {  
-            if ($this->validarTurma($turma)){
+            if ($this->validarTurmaExiste($turma)){
                 Contador::where('turma',$turma['turma'])->update($turma);
                 $this->turmas[$this->keyUpdate]['quantidade'] = $turma['quantidade'];
                 session()->flash('message', "turma: ".$turma['turma']." atualizada.");
@@ -42,7 +42,7 @@ class PageHome extends Component
         $this->somar();
     }
 
-    public function validarTurma($data)
+    public function validarTurmaExiste($data)
     {
         foreach ($this->turmas as $index => $item){
             if ($item['turma'] == $data['turma']){
