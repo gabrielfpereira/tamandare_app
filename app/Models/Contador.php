@@ -9,4 +9,9 @@ class Contador extends Model
 {
     use HasFactory;
     protected $fillable = ['turma','quantidade','user_id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
