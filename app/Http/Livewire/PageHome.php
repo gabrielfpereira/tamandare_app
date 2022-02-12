@@ -38,6 +38,7 @@ class PageHome extends Component
                 }                
             } else {
                 $turma['user_id'] = auth()->user()->id;
+                $turma['created_at'] = $this->filterDate;
                 Contador::create($turma);
                 $this->turmas[] = $turma;   
                 session()->flash('message', "turma: ".$turma['turma']." inserida.");         
