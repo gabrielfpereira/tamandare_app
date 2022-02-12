@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Contador;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class PageHome extends Component
@@ -28,9 +29,13 @@ class PageHome extends Component
     public function atualizar($turma)
     {  
             if ($this->validarTurmaExiste($turma)){
-                Contador::where('turma',$turma['turma'])->update($turma);
-                $this->turmas[$this->keyUpdate]['quantidade'] = $turma['quantidade'];
-                session()->flash('message', "turma: ".$turma['turma']." atualizada.");
+                if(Auth::user()->can('update', $this->turmas[$this->keyUpdate])){
+                    Contador::where('turma',$turma['turma'])->update($turma);
+                    session()->flash('message', "turma: ".$turma['turma']." atualizada.");
+                    $this->turmas[$this->keyUpdate]['quantidade'] = $turma['quantidade'];
+                } else {
+                    session()->flash('message', "Você não permissão para alterar.");
+                }                
             } else {
                 $turma['user_id'] = auth()->user()->id;
                 Contador::create($turma);
