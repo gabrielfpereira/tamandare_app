@@ -1,6 +1,6 @@
 <div class="min-h-screen">
     
-    <div class="bg-sky-800  flex justify-between items-center px-3">
+    <div class="bg-indigo-900  flex justify-between items-center px-3">
         <div class="w-14 h-14">
             <img src="{{asset('logo_tamandare.png')}}" alt="logo_eti_tamandare">
         </div>
