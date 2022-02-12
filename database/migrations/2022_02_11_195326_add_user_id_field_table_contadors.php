@@ -14,7 +14,8 @@ class AddUserIdFieldTableContadors extends Migration
     public function up()
     {
         Schema::table('contadors', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained();
+            $table->unsignedBigInteger('user_id')->default(1);
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
