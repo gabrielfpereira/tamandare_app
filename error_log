@@ -1,0 +1,16 @@
+[07-Feb-2022 02:16:17 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[07-Feb-2022 02:16:17 UTC] PHP Warning:  require(/home/yip7qptw/tamandare_app/vendor/autoload.php): failed to open stream: Arquivo ou diretório não encontrado in /home/yip7qptw/tamandare_app/artisan on line 18
+[07-Feb-2022 02:16:17 UTC] PHP Fatal error:  require(): Failed opening required '/home/yip7qptw/tamandare_app/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/yip7qptw/tamandare_app/artisan on line 18
+[07-Feb-2022 02:17:45 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[07-Feb-2022 02:17:45 UTC] PHP Warning:  require(/home/yip7qptw/tamandare_app/vendor/autoload.php): failed to open stream: Arquivo ou diretório não encontrado in /home/yip7qptw/tamandare_app/artisan on line 18
+[07-Feb-2022 02:17:45 UTC] PHP Fatal error:  require(): Failed opening required '/home/yip7qptw/tamandare_app/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/yip7qptw/tamandare_app/artisan on line 18
+[07-Feb-2022 02:18:40 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[07-Feb-2022 02:23:05 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[07-Feb-2022 02:23:10 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[07-Feb-2022 02:24:19 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[07-Feb-2022 02:56:35 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[10-Feb-2022 01:53:34 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[10-Feb-2022 01:54:03 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[23-Feb-2022 21:14:50 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[23-Feb-2022 21:15:35 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
+[23-Feb-2022 21:16:55 UTC] PHP Warning:  Module 'memcached' already loaded in Unknown on line 0
