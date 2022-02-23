@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Contador extends Model
 {
     use HasFactory;
-    protected $fillable = ['turma','quantidade'];
+    protected $fillable = ['turma','quantidade','user_id','created_at'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
